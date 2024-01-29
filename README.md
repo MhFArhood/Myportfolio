@@ -1,2 +1,2 @@
 # Myportfolio
-converted My web site in asp.net mvc
+i converted my web site in asp.net mvc
