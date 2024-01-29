@@ -1,0 +1,279 @@
+﻿
+@model List<Adata>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyPotfilo</title>
+ @await RenderSectionAsync("SEO", required: true)
+
+    <link rel="stylesheet" href="~/css/main.css">
+</head>
+<body>
+    
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <img src="~/img/logo.png" alt="Global">
+            <p>@ViewData["hedingTitel"]</p>
+        </a>
+        <p class="device-notification--message">این وبسایت برای بازدید و کیفیت بیشتر با موبایل های اندروید و آی او اس و همچنین تمامی تب لت ها بهینه سازی شده است.</p>
+    </div>
+
+    <div class="perspective effect-rotate-left">
+        <div class="container">
+            <div class="outer-nav--return"></div>
+            <div id="viewport" class="l-viewport">
+                <div class="l-wrapper">
+                    <header class="header">
+                        <a class="header--logo" href="#0">
+                            <img src="~/img/logo.png" alt="MhFarhood">
+                            <p>MhFarhood</p>
+                        </a>
+                        <button class="header--cta cta">مرا استخدام کنید</button>
+                        <div class="header--nav-toggle">
+                            <span></span>
+                        </div>
+                    </header>
+                    <nav class="l-side-nav">
+                        <ul class="side-nav">
+                            <li class="is-active"><span>خانه</span></li>
+                            <li><span>کارها</span></li>
+                            <li><span>درباره من</span></li>
+                            <li><span>ارتباط با من</span></li>
+                            <li><span>مرا استخدام کنید</span></li>
+                        </ul>
+                    </nav>
+                    <ul class="l-main-content main-content">
+                        <li class="l-section section section--is-active">
+                            <div class="intro">
+                                <div class="intro--banner">
+                                    <h1>وبسایت ها<br>و طرح های سه بعدی را<br>با ما تجربه کنید</h1>
+                                    <button class="cta">مرا استخدام کنید
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                  <span class="btn-background"></span>
+                </button>
+                                    <img src="~/img/introduction-visual.png" alt="Welcome">
+                                </div>
+                                <div class="intro--options">
+                                   @foreach(var item in Model){
+                                       <a asp-controller="Home" asp-action="Index">
+                                        <h3>@item.Titel</h3>
+                                        <p>@item.Description</p>
+                                    </a>
+                                   }
+                                   
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="work">
+                                <h2>خدمات من</h2>
+                                <div class="work--lockup">
+                                    <ul class="slider">
+                                        <li class="slider--item slider--item-left">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="~/img/work-victory.jpg" alt="Victory">
+                                                </div>
+                                                <p class="slider--item-title">سایت کاملا اختصاصی</p>
+                                                <p class="slider--item-description">سایت شما را کاملا اختصاصی و دقیقا مشابه طرح شما میسازیم</p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-center">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="~/img/work-metiew-smith.jpg" alt="Metiew and Smith">
+                                                </div>
+                                                <p class="slider--item-title">طراحی وبسایت &amp; در دو هفته تا یکماه</p>
+                                                <p class="slider--item-description">ما وبسایت شما را در عرض دو هفته آماده میکنیم</p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-right">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="~/img/work-alex-nowak.jpg" alt="Alex Nowak">
+                                                </div>
+                                                <p class="slider--item-title">تعمیر بازنویسی و پشتیبانی سایت شما</p>
+                                                <p class="slider--item-description">ما میتئانیم از سایت شما تعمیر و پشتیبانی کنیم</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slider--prev">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                                    </div>
+                                    <div class="slider--next">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="about">
+                                <div class="about--banner">
+                                    <h2>علاقه <br>های شخصی<br><br>من چیست؟</h2>
+                                    <a href="#0">نگاه کنید
+                  <span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </span>
+                </a>
+                                    <img src="~/img/about-visual.png" alt="About Us">
+                                </div>
+                                <div class="about--options">
+                                    <a href="#0">
+                                        <h3>اساطیر</h3>
+                                    </a>
+                                    <a href="#0">
+                                        <h3>فلسفه</h3>
+                                    </a>
+                                    <a href="#0">
+                                        <h3>تاریخ</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="contact">
+                                <div class="contact--lockup">
+                                    <div class="modal">
+                                        <div class="modal--information">
+                                            <p>ایران مازندران محمودآباد خیابان آزادی</p>
+                                            <a href="Marshalss.1488@gmail.com">Model.Email</a>
+                                            <a href="tel:+989917403277">Model.Number</a>
+                                        </div>
+                                        <ul class="modal--options">
+                                            <li><a href="#0">با من</a></li>
+                                            <li><a href="#0">در ارتباط باشید</a></li>
+                                            <li><a href="mailto:Marshalss.1488@gmail.com">تماس بگیرید</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="hire">
+                                <h2>چه کاری میتوانم برایتان بکنم؟</h2>
+                                <!-- checkout formspree.io for easy form setup -->
+                                <form class="work-request">
+                                    <div class="work-request--options">
+                                        <span class="options-a">
+                    <input id="opt-1" type="checkbox" value="app design">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      طراحی برنامه سایت
+                    </label>
+                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      طراحی گرافیک سایت
+                    </label>
+                    <input id="opt-3" type="checkbox" value="motion design">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      آموزش طراحی و برنامه نویسی
+                    </label>
+                  </span>
+                                        <span class="options-b">
+                    <input id="opt-4" type="checkbox" value="ux design">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      رابط کاربری سایت
+                    </label>
+                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      طراحی سایت
+                    </label>
+                    <input id="opt-6" type="checkbox" value="marketing">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      سئو سایت
+                    </label>
+                  </span>
+                                    </div>
+                                    <div class="work-request--information">
+                                        <div class="information-name">
+                                            <input id="name" type="text" spellcheck="false">
+                                            <label for="name">Name</label>
+                                        </div>
+                                        <div class="information-email">
+                                            <input id="email" type="email" spellcheck="false">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Send Request">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="outer-nav">
+            <li class="is-active">خانه</li>
+            <li>کارها</li>
+            <li>درباره من</li>
+            <li>ارتباط با من</li>
+            <li>مرا استخدام کنید</li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="~/js/vendor/jquery-2.2.4.min.js"><\/script>')
+    </script>
+    <script src="~/js/functions-min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
